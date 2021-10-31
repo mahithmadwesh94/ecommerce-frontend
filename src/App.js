@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./pages/Home";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import ProductListPage from "./pages/ProductListPage";
+import ProductPage from "./pages/ProductPage";
+import Login from "./pages/Login";
+import Cart from "./pages/Cart";
+import { connect } from "react-redux"
 
-function App() {
+function App(props) {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/products/:category">
+          <ProductListPage />
+        </Route>
+        <Route path="/product/:id">
+          <ProductPage />
+        </Route>
+        <Route path="/login">
+          {Object.keys(props.user).length ? <Redirect to="/" /> : <Login />}
+        </Route>
+        <Route path="/cart">
+          <Cart />
+        </Route>
+      </Switch>
+
+    </BrowserRouter>
   );
 }
 
-export default App;
+const mapStateToProps = (props) => {
+  return props
+}
+
+export default connect(mapStateToProps)(App);

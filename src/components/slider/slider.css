@@ -1,0 +1,23 @@
+.carousel-img{
+   width: 30%;
+   height: 30%;
+   object-fit: cover;
+
+   
+}
+
+.banner-caption{
+   
+    font-size: 30px;
+}
+
+.banner-caption >h1 {
+    font-size: 70px;
+}
+.banner-caption >p {
+    font-size: 50px;
+}
+
+.carousel1{
+    background-color: coral;
+}

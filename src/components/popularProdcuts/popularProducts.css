@@ -1,0 +1,21 @@
+.popularProductIcon{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.popularProductIcon:hover{
+    color: white !important;
+    background-color: black;
+}
+
+.productAddToCartButton{
+    width: 100px;
+
+}
+
+
