@@ -1,10 +1,3 @@
-
-# MERN Ecommerce Application
-
-Complete End to End Web Application with JWT Authentication and Authorization. 
-The application has Stripe Payment Included with Redux for state management
-
-
 # MERN Ecommerce Application
 
 Complete End to End Web Application with JWT Authentication and Authorization. 
